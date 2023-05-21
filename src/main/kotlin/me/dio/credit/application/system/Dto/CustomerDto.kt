@@ -1,4 +1,4 @@
-package me.dio.credit.application.system.Dto.controler
+package me.dio.credit.application.system.Dto
 
 import me.dio.credit.application.system.entity.Address
 import me.dio.credit.application.system.entity.Customer
@@ -12,7 +12,7 @@ data class CustomerDto (
     val email: String,
     val password: String,
     val zipCode: String,
-    val Street: String,
+    val street: String,
 ){
     fun toEntity(): Customer = Customer(
         firstName= this.firstName,
@@ -23,7 +23,7 @@ data class CustomerDto (
         password =  this.password,
         adress = Address(
             zipCode= this.zipCode,
-            street = this.Street
+            street = this.street
 
         )
 

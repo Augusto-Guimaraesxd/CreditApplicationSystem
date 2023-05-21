@@ -1,9 +1,8 @@
 package me.dio.credit.application.system.controler
 
-import com.electronwill.nightconfig.core.conversion.Path
 import me.dio.credit.application.system.Dto.CustomerUpdateDto
 import me.dio.credit.application.system.Dto.CustomerView
-import me.dio.credit.application.system.Dto.controler.CustomerDto
+import me.dio.credit.application.system.Dto.CustomerDto
 import me.dio.credit.application.system.entity.Customer
 import me.dio.credit.application.system.service.impl.CustomerService
 import org.springframework.http.HttpStatus
