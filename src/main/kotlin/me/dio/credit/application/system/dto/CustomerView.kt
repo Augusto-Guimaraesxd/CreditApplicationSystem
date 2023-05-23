@@ -1,7 +1,6 @@
-package me.dio.credit.application.system.Dto
+package me.dio.credit.application.system.dto
 
 import me.dio.credit.application.system.entity.Customer
-import org.hibernate.validator.constraints.br.CPF
 import java.math.BigDecimal
 
 data class CustomerView (

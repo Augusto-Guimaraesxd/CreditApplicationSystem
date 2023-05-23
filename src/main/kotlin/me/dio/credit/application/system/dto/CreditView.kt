@@ -1,4 +1,4 @@
-package me.dio.credit.application.system.Dto
+package me.dio.credit.application.system.dto
 
 import me.dio.credit.application.system.entity.Credit
 import me.dio.credit.application.system.enummeration.Status
