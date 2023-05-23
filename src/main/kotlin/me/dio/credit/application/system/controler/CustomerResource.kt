@@ -1,8 +1,9 @@
 package me.dio.credit.application.system.controler
 
-import me.dio.credit.application.system.Dto.CustomerUpdateDto
-import me.dio.credit.application.system.Dto.CustomerView
-import me.dio.credit.application.system.Dto.CustomerDto
+import jakarta.validation.Valid
+import me.dio.credit.application.system.dto.CustomerUpdateDto
+import me.dio.credit.application.system.dto.CustomerView
+import me.dio.credit.application.system.dto.CustomerDto
 import me.dio.credit.application.system.entity.Customer
 import me.dio.credit.application.system.service.impl.CustomerService
 import org.springframework.http.HttpStatus
@@ -17,7 +18,7 @@ class CustomerResource(
 ) {
 
     @PostMapping
-    fun saveCustomer(@RequestBody customerDto: CustomerDto): ResponseEntity<String> {
+    fun saveCustomer(@RequestBody @Valid customerDto: CustomerDto): ResponseEntity<String> {
         val savedCustomer = this.customerService.save(customerDto.toEntity())
         return ResponseEntity.status(HttpStatus.CREATED).body("Customer ${savedCustomer.email}saved!")
     }
